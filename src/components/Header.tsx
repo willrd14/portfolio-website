@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/global.css';
 
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               <li key={link.name} className="nav-item">
                 <Link 
                   to={link.path} 
-                  className="nav-link"
+                  className={`nav-link ${isActive(link.path) ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
