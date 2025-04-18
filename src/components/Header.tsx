@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/global.css';
 
 interface NavLink {
@@ -9,7 +9,7 @@ interface NavLink {
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const location = useLocation();
   const navLinks: NavLink[] = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
@@ -17,6 +17,17 @@ const Header: React.FC = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  // Check if a route is active with HashRouter
+  const isActive = (path: string) => {
+    // For the home route, check if it's either empty hash or '/'
+    if (path === '/' && (location.pathname === '/' || location.pathname === '')) {
+      return true;
+    }
+    // For other routes, check if pathname matches the path
+    return path !== '/' && location.pathname === path;
+  };
+
+  // Toggle menu open/close
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
