@@ -1,5 +1,5 @@
 import { useEffect, useState, Suspense, Component, ErrorInfo, ReactNode } from 'react'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
 import './styles/global.css'
 
 // Components
@@ -91,7 +91,7 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Layout>
           <Suspense fallback={<LoadingSpinner />}>
@@ -105,7 +105,7 @@ function App() {
             </Routes>
           </Suspense>
         </Layout>
-      </BrowserRouter>
+      </HashRouter>
     </ErrorBoundary>
   );
 }
