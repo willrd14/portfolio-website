@@ -37,16 +37,16 @@ const Home: React.FC = () => {
   const featuredProjects: FeaturedProject[] = [
     {
       id: 1,
-      title: 'E-commerce Website',
-      description: 'A fully responsive e-commerce platform with product filtering, shopping cart, and checkout.',
-      imageUrl: '/placeholder-project.jpg',
+      title: 'Magic tour Travel Agency',
+      description: 'Una agencia de viajes y turismos, realiza reservaciones a nivel internacional',
+      imageUrl: '/Magic tour Travel Agency.jpg',
       technologies: ['React', 'Node.js', 'MongoDB']
     },
     {
       id: 2,
       title: 'Task Management App',
       description: 'A project management tool that helps users organize tasks, set priorities, and track progress.',
-      imageUrl: '/placeholder-project.jpg',
+      imageUrl: 'Desktop - 1.png',
       technologies: ['React', 'TypeScript', 'Firebase']
     }
   ];
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content">
-              <h1 className="hero-title">Hello, I'm <span className="highlight">Williams R. Villazar Hdez.</span></h1>
+              <h1 className="hero-title">Hola, Soy <span className="highlight">Williams R. Villazar Hdez.</span></h1>
               <h2 className="hero-subtitle">Web Developer & Web Designer</h2>
               <p className="hero-description">
                 Creo tu pagina web deseada a partir de tus gustos y decisiones.<br></br>
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
       {/* Skills Summary Section */}
       <section className="skills-summary">
         <div className="container">
-          <h2 className="section-title">My Skills</h2>
+          <h2 className="section-title">Mis Habilidades</h2>
           <div className="skills-grid">
             {skillGroups.map((group, index) => (
               <div key={index} className="skill-group">
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
             ))}
           </div>
           <div className="section-footer">
-            <Link to="/skills" className="btn">View All Skills</Link>
+            <Link to="/skills" className="btn">Ver habilidades</Link>
           </div>
         </div>
       </section>
@@ -145,12 +145,12 @@ const Home: React.FC = () => {
                     <span key={index} className="tech-tag">{tech}</span>
                   ))}
                 </div>
-                <Link to={`/projects`} className="btn btn-sm">See Details</Link>
+                <Link to={`/projects`} className="btn btn-sm">Ver detalles</Link>
               </div>
             ))}
           </div>
           <div className="section-footer">
-            <Link to="/projects" className="btn">View All Projects</Link>
+            <Link to="/projects" className="btn">Todos mis proyectos</Link>
           </div>
         </div>
       </section>
@@ -158,12 +158,12 @@ const Home: React.FC = () => {
       {/* Contact Preview Section */}
       <section className="contact-preview">
         <div className="container">
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">Contactame!!</h2>
           <p className="contact-text">
-            Interested in working together or have a question? Feel free to reach out!
+            Si tienes interes en trabajar conmigo, puedes dejar un mensaje
           </p>
           <div className="contact-preview-buttons">
-            <Link to="/contact" className="btn btn-primary">Contact Me</Link>
+            <Link to="/contact" className="btn btn-primary">Contactame</Link>
           </div>
         </div>
       </section>
