@@ -1,4 +1,17 @@
 *{
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
+  margin: auto;
+  padding: auto;
+}
+
+/* Header */
+
+a:link, :visited, :hover, :active{
+    color: #fff;
+}
+
+.container, .header, nav, ul{
+  list-style-type: none;
+
 }
